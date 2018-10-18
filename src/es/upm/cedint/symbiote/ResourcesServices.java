@@ -45,6 +45,7 @@ import static eu.h2020.symbiote.client.AbstractSymbIoTeClientFactory.*;
 public class ResourcesServices {
 
 	private TimerTask mongoTask;
+	private Timer timer;
 
 	private static String coreAddress = "https://symbiote-open.man.poznan.pl";
 	private static String keystorePath = "keystore.jks";
@@ -64,14 +65,15 @@ public class ResourcesServices {
 	@GET
 	public void initializeCollectionTask() {
 		this.mongoTask = MongoServiceTask.getInstance();
-		Timer timer = new Timer();
-		try {
-			timer.schedule(mongoTask, 0, 3600000);
-			System.out.println("MongoServiceTask started.");
-		} catch (Exception e) {
-			System.out.println("MongoServiceTask already started.");
+		if(timer == null) {
+			this.timer = new Timer();
+			try {
+				timer.schedule(mongoTask, 0, 300000);
+				System.out.println("MongoServiceTask started.");
+			} catch (Exception e) {
+				System.out.println("MongoServiceTask already started.");
+			}
 		}
-		
 	}
 
 	@Path("featureCollection/{location}")
