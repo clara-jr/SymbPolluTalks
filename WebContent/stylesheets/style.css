@@ -1,0 +1,184 @@
+@font-face {
+	font-family: Circular;
+	src: url(../fonts/CircularStd-Book.otf);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 300px;
+	background-color: #f8f8f8;
+	color: #333;
+}
+
+h1, h2, h3, p, span, button, input {
+	font: 14px Circular,"Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 60px;
+}
+
+label {
+	font-size: 16px;
+}
+
+a:hover {
+	color: #00B7FF;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+.glyphicon {
+	padding-right: 10px;
+}
+
+.navbar-brand {
+	padding-right: 35px;
+	margin-left: 15px;
+}
+
+.jumbotron {
+	padding: 20px 20px;
+	text-align: center;
+}
+
+@media screen and (min-width: 1500px) {
+	.container {
+		width: 1470px;
+	}
+}
+
+.btn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+input {
+	padding: 10px 10px 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: #e5e5e5;
+}
+
+.down {
+	display:block;
+	padding: 5px 0;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;"
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.down li p {
+	display: block;
+	padding: 3px 20px;
+	margin-bottom: 0px;
+	clear: both;
+	font-size: 13px;
+	line-height: 1.42857143;
+	color: #333;
+	white-space:
+	nowrap;
+}
+
+.info {
+	padding: 20px;
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.info h4 {
+	margin: 0 0 5px;
+	color: #3D3938;
+}
+.legend-esri {
+	color: #555555;
+	line-height: 18px;
+	max-height: 250px;
+	width: 215px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	overflow: auto;
+}
+.legend-esri .outline {
+	border: 1px solid #CCCCCC;
+	border-radius: 6px 6px 6px 6px;
+	float: left;
+	height: 12px;
+	margin: 3px 10px 3px 3px;
+	padding: 2px;
+	width: 12px;
+}
+.legend-esri .outline i {
+	border-radius: 4px 4px 4px 4px;
+	float: left;
+	height: 6px;
+	width: 6px;
+}
+.legend-esri .inline {
+	clear: both;
+	float: left;
+	margin-right: 10px;
+}
+.legend-esri .info-title {
+	clear: both;
+	float: left;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: 5px 0;
+	width: 100%;
+}
+.legend-esri .info-label {
+	float: left;
+	width: 170px;
+	font-size: 0.8em;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+
+.leaflet-control-attribution a {
+    display: none;
+}
+
+#map > div.leaflet-control-container > div.leaflet-top.leaflet-left {
+	display: none;
+}
+
+#map { padding: 0; width: 800px; height: 500px; }

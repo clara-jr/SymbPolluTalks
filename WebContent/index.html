@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="module_name">
+<head>
+    <title>Hackatown</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/symbioteAPIREST/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.7/angular-resource.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.7/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/esri-leaflet/2.2.3/esri-leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-leaflet-directive/0.10.0/angular-leaflet-directive.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/symbioteAPIREST/js/route.js"></script>
+    <script src="/symbioteAPIREST/js/controllers.js"></script>
+  </head>
+  <body style="padding-top: 10px;">
+    <div class="jumbotron" ng-view ng-style="{background:color}">
+    </div>
+  </body>
+</html>
