@@ -63,12 +63,15 @@ public class ResourcesServices {
 	@Path("initializeCollectionTask/")
 	@GET
 	public void initializeCollectionTask() {
-		if (mongoTask == null) {
-			this.mongoTask = new MongoServiceTask();
-			Timer timer = new Timer();
+		this.mongoTask = MongoServiceTask.getInstance();
+		Timer timer = new Timer();
+		try {
 			timer.schedule(mongoTask, 0, 3600000);
 			System.out.println("MongoServiceTask started.");
+		} catch (Exception e) {
+			System.out.println("MongoServiceTask already started.");
 		}
+		
 	}
 
 	@Path("featureCollection/{location}")

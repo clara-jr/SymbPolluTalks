@@ -4,7 +4,14 @@ import java.util.TimerTask;
 
 public class MongoServiceTask extends TimerTask{
 
+	private static MongoServiceTask mongoServiceTask = null; 
 	private MongoService mongoService;
+	
+    public static MongoServiceTask getInstance() { 
+        if (mongoServiceTask == null) 
+        	mongoServiceTask = new MongoServiceTask(); 
+        return mongoServiceTask; 
+    } 
 	
 	@Override
 	public void run() {

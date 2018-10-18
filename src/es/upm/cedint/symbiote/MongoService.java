@@ -104,6 +104,7 @@ public class MongoService {
 
 		JSONArray observations = jsonArray;
 		boolean tweet = false;
+		String tweet_locations = "";
 		long time = Calendar.getInstance().getTimeInMillis();
 
 		JSONObject observationsData = new JSONObject("{\"time\":"+time+",\"location\":"+location+",\"geojson\": {\"type\":\"FeatureCollection\",\"features\":[]}}");
@@ -130,6 +131,7 @@ public class MongoService {
 				float value = values.get(largest);
 				if (value >= 100) {
 					tweet = true;
+					tweet_locations = tweet_locations.concat(" [" + object.getString("latitude") + ", " + object.getString("longitude") + " ]");
 				}
 				JSONObject feature = new JSONObject("{\"type\":\"Feature\",\"id\":\""+Integer.toString(i)+"\""+
 						",\"properties\":{\"name\":\"Air Quality Index\""+
@@ -149,7 +151,7 @@ public class MongoService {
 		
 		if (tweet) {
 			try {
-				updateTweet(getTwitterInstance(), "Pollution Alert in SymbCity!");
+				updateTweet(getTwitterInstance(), "Pollution Alert in SymbCity! This alert comes from the following locations: " + tweet_locations);
 			} catch (TwitterException e) {
 				System.out.println(e.getMessage());
 			}
